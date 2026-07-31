@@ -24,10 +24,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
      ================================================================== -->
 <script>
 window.CFG = {
-  /* ---------- vídeo de abertura (agora OPCIONAL, sem trava) ---------- */
+  /* ---------- vídeo de abertura (OPCIONAL, sem trava) ---------- */
   videoAbertura : "video1.mp4",
   posterAbertura: "poster1.jpg",
-  /* segundosTrava não é mais usado nesta versão — o vídeo não bloqueia o quiz */
 
   /* ---------- contato ---------- */
   whatsapp : "557798166369",
@@ -158,12 +157,14 @@ h3{font-family:"Fraunces",serif;font-size:19px;line-height:1.3;margin:0 0 10px;c
 .hint{color:var(--ink-soft);font-size:13.5px;line-height:1.45;margin:-2px 0 18px;font-style:italic}
 .pergunta{margin:4px 0 12px}
 
-/* vídeo de abertura — agora slim e opcional, no topo da 1ª tela */
+/* vídeo de abertura — slim e opcional, no topo da 1ª tela.
+   contain mostra o vídeo vertical inteiro (rosto completo) sem cortar;
+   o fundo escuro preenche o que sobrar nas laterais, discreto. */
 .videobox{position:relative;border-radius:var(--radius);overflow:hidden;
   background:var(--sand);box-shadow:var(--shadow);margin:0 0 14px}
 .videobox video{display:block;width:100%;aspect-ratio:9/16;object-fit:cover;background:var(--sand)}
-.videobox.slim{max-width:320px;margin:0 auto 16px;box-shadow:var(--shadow-sm)}
-.videobox.slim video{aspect-ratio:auto;height:200px;object-fit:cover}
+.videobox.slim{max-width:260px;margin:0 auto 16px;box-shadow:var(--shadow-sm);background:#0b1a11}
+.videobox.slim video{aspect-ratio:9/16;height:auto;max-height:300px;width:100%;object-fit:contain}
 .videolabel{text-align:center;font-size:12.5px;font-weight:600;color:var(--ink-soft);margin:0 0 14px}
 .sound{position:absolute;right:10px;top:10px;z-index:3;border:0;cursor:pointer;
   background:rgba(9,26,16,.72);color:#fff;font:600 12.5px/1 "Plus Jakarta Sans",sans-serif;
